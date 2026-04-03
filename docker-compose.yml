@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      # development | production
+      target: development
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+      - /app/node_modules # Prevents local node_modules from overwriting container modules
+    environment:
+      - NODE_ENV=development
+      - PORT=4000
