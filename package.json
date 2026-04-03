@@ -3,16 +3,31 @@
   "version": "1.0.0",
   "description": "Title: Build and Test a Simple GraphQL API with Automated Test Suite",
   "license": "ISC",
-  "author": "",
+  "author": "Jhordeym Santos",
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "dev": "npx tsc --noEmit && npx tsx src/index.ts",
+    "watch": "npx tsx --watch src/index.ts",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^5.2.1",
     "graphql": "^16.13.2",
     "graphql-http": "^1.22.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^7.2.0",
+    "@types/node": "^25.5.2",
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.9",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
   }
 }

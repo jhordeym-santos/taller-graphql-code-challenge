@@ -1,14 +1,9 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es2015",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "rootDir": "./src",
-        "outDir": "./dist",
-        "types": ["jest", "node"]
-    },
-    "include": ["**/*.ts"],
-    "exclude": ["node_modules", "dist"]
+  "extends": "@tsconfig/node24/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "resolveJsonModule": true,
+    "types": ["jest", "node"]
+  },
 }
